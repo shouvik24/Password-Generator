@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
@@ -17,8 +24,8 @@
           data-passwordDisplay
         />
 
-        <button data-copy>
-          <span data-copyMsg></span>
+        <button class="copyBtn" data-copy>
+          <span class="tooltip" data-copyMsg></span>
           <img src="./assets/copy.svg" alt="copy" width="24px" height="24px" />
         </button>
       </div>
@@ -41,24 +48,24 @@
         <!-- Checkboxes -->
 
         <!-- Checkbox 1 -->
-        <div>
+        <div class="check">
           <input type="checkbox" id="uppercase" />
           <label for="uppercase">Includes Uppercase Letters</label>
         </div>
         <!-- Checkbox 2 -->
-        <div>
+        <div class="check">
           <input type="checkbox" id="lowercase" />
           <label for="lowercase">Includes Lowecase Letters</label>
         </div>
 
         <!-- Checkbox 3 -->
-        <div>
+        <div class="check">
           <input type="checkbox" id="numbers" />
           <label for="numbers">Includes Number</label>
         </div>
 
         <!-- Checkbox 4 -->
-        <div>
+        <div class="check">
           <input type="checkbox" id="symbols" />
           <label for="symbols">Includes Symbols</label>
         </div>
@@ -66,7 +73,7 @@
         <!-- Strength Section -->
         <div class="strength-container">
           <p>Strength</p>
-          <div data-indicator></div>
+          <div class="indicator" data-indicator></div>
         </div>
 
         <!-- Generate Password -->
